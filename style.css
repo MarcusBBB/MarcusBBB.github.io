@@ -21,7 +21,7 @@ body {
 }
 
 main {
-	padding-top: 5rem;
+	padding: 5rem 1rem 1rem 1rem;
 }
 
 a {
@@ -40,6 +40,7 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	background-color: white;
 }
 
 nav ul {
@@ -55,6 +56,12 @@ nav ul {
 nav ul li {
 	margin: var(--spacing-1);
 }
+
+/* main */
+#name {
+	display: none;
+}
+
 #over-mij {
 	display: flex;
 }
@@ -62,6 +69,7 @@ nav ul li {
 	width: 300px;
 	border-radius: var(--border-radius);
 	flex-shrink: 0;
+	margin: 0 auto;
 }
 
 summary {
@@ -84,4 +92,17 @@ summary h2 {
 	font-size: 2em;
 	width: 2em;
 	margin-top: var(--spacing-1);
+}
+
+@media only screen and (max-width: 600px) {
+	header h1 {
+		display: none;
+	}
+
+	#name {
+		display: block;
+	}
+	#over-mij {
+		flex-direction: column;
+	}
 }
